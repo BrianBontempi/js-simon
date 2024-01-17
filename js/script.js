@@ -23,3 +23,14 @@ function displayNumbers() {
     }, 10000);
   }
 
+  // Funzione per chiedere all'utente di inserire i numeri
+function getUserInput(originalNumbers) {
+    let userNumbers = [];
+    for (let i = 0; i < 5; i++) {
+      let userInput = prompt('Inserisci il numero ' + (i + 1));
+      userNumbers.push(parseInt(userInput));
+    }
+    checkResults(originalNumbers, userNumbers);
+  }
+
+  
