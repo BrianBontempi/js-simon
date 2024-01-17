@@ -33,4 +33,21 @@ function getUserInput(originalNumbers) {
     checkResults(originalNumbers, userNumbers);
   }
 
+  // Funzione per verificare i risultati
+function checkResults(originalNumbers, userNumbers) {
+    let correctNumbers = [];
+    for (let i = 0; i < 5; i++) {
+      if (originalNumbers.includes(userNumbers[i])) {
+        correctNumbers.push(userNumbers[i]);
+      }
+    }
   
+    alert('Hai indovinato ' + correctNumbers.length + ' numeri: ' + correctNumbers.join(', '));
+  }
+  
+  // Avvia il gioco al caricamento della pagina
+  window.onload = function() {
+    displayNumbers();
+  };
+
+//   !!!!!!! NON RIESCO A FAR SPARIRE I NUMERI QUANDO SCADE IL TEMPO GRRRR!!!!!
